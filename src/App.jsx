@@ -4,12 +4,15 @@ import "./App.css";
 import Home from "./pages/Home/Home";
 import Post from "./pages/Post/Post";
 import Login from "./pages/Login/Login";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 const App = () => {
   return (
-    <div className="app">
-      <Navbar />
-      <Login />
-    </div>
+    <BrowserRouter>
+      <div className="app">
+        <Navbar />
+        <Routes></Routes>
+      </div>
+    </BrowserRouter>
   );
 };
 
