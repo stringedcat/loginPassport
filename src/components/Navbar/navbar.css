@@ -26,3 +26,8 @@
   border-radius: 50%;
   object-fit: cover;
 }
+
+.link {
+  color: inherit;
+  text-decoration: none;
+}
