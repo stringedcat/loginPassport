@@ -20,9 +20,13 @@
 .cardButton {
   border: none;
   border-radius: 10px;
-  background-color: rgba(53, 16, 102, 0.678);
+  background-color: #00bfa6;
   padding: 10px;
   color: white;
   font-weight: bold;
   cursor: pointer;
+}
+
+.title {
+  font-weight: bold;
 }

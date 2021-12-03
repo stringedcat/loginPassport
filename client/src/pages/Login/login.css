@@ -8,7 +8,7 @@
 
 .wrapper {
   width: 60%;
-  height: 75%;
+  height: 300px;
   -webkit-box-shadow: -4px 3px 20px -6px #000000;
   box-shadow: -4px 3px 20px -6px #000000;
   display: flex;
@@ -88,7 +88,7 @@ input {
 
 .submit {
   width: 200px;
-  background-color: purple;
+  background-color: #00bfa6;
   font-weight: bold;
   border: none;
   padding: 15px 20px;
@@ -98,5 +98,5 @@ input {
 .loginTitle {
   position: absolute;
   top: 150px;
-  color: lightgray;
+  color: black;
 }
