@@ -12,7 +12,7 @@ router.get("/login/success", (req, res, next) => {
         user: req.user,
         cookies: req.cookies,
       })
-    : next();
+    : console.log("There's not a user");
 });
 
 router.get("/login/failed", (req, res) => {
@@ -20,12 +20,14 @@ router.get("/login/failed", (req, res) => {
     success: false,
     message: "failure in that authentication",
   });
+  console.log("failure logout");
 });
 
 router.get("/logout", (req, res) => {
   req.logout();
   res.redirect(CLIENT_URL);
 });
+
 router.get("/google", passport.authenticate("google", { scope: ["profile"] }));
 
 router.get(
@@ -36,4 +38,13 @@ router.get(
   })
 );
 
+router.get("/github", passport.authenticate("github", { scope: ["profile"] }));
+
+router.get(
+  "/github/callback",
+  passport.authenticate("github", {
+    successRedirect: CLIENT_URL,
+    failureRedirect: "/login/failed",
+  })
+);
 module.exports = router;
