@@ -5,7 +5,7 @@ const authRoute = require("./routes/auth");
 const passportSetup = require("./passport.js");
 const cors = require("cors");
 const app = express();
-
+// using first cookie session to save the session
 app.use(
   cookieSession({
     name: "session",
