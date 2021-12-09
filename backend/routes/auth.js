@@ -48,7 +48,7 @@ router.get(
   })
 );
 
-router.get("/facebook", passport.authenticate("facebook", { scope: ["profile"] }));
+router.get("/facebook", passport.authenticate("facebook", { scope: ['public_profile'] }));
 
 router.get(
   "/facebook/callback",
