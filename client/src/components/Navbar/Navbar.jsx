@@ -9,14 +9,17 @@ const Navbar = ({ user }) => {
     <div className="navbar">
       <span className="logo">
         <Link className="link" to="/">
-          Home
+          Welcome to my authentication App
         </Link>
       </span>
       {user ? (
         <ul className="list">
           <li className="listItem">
-            {user.photos ?<img src={user.photos[0].value} alt="" className="avatar" />  : <h6> nothing</h6>}
-            
+            {user.photos ? (
+              <img src={user.photos[0].value} alt="" className="avatar" />
+            ) : (
+              <h6> nothing</h6>
+            )}
           </li>
           <li className="listItem">{user.displayName}</li>
           <li className="listItem" onClick={logout}>
@@ -24,9 +27,12 @@ const Navbar = ({ user }) => {
           </li>
         </ul>
       ) : (
-        <Link className="link" to="/login">
-          Login
-        </Link>
+        <>
+          <h3>Identify yourself to see the docs</h3>
+          <Link className="link" to="/login">
+            Log in
+          </Link>
+        </>
       )}
     </div>
   );
