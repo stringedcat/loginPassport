@@ -13,7 +13,11 @@ const Login = () => {
 
   const facebook = () => {
     window.open("http://localhost:5000/auth/facebook", "_self");
-  }
+  };
+
+  const twitter = () => {
+    window.open("http://localhost:5000/auth/twitter", "_self");
+  };
   return (
     <div className="login">
       <h1 className="loginTitle">Choosing a Login Method</h1>
@@ -30,6 +34,10 @@ const Login = () => {
           <div className="loginButton github" onClick={github}>
             <img src={Github} alt="" />
             Github
+          </div>
+          <div className="loginButton facebook" onClick={twitter}>
+            <img src={Facebook} alt="" />
+            Twitter
           </div>
         </div>
         {/*      <div className="center">

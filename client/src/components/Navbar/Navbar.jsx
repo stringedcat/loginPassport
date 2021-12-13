@@ -8,9 +8,15 @@ const Navbar = ({ user }) => {
   return (
     <div className="navbar">
       <span className="logo">
-        <Link className="link" to="/">
-          Welcome to my authentication App
-        </Link>
+        {user ? (
+          <Link className="link" to="/">
+            <h2> Home</h2>
+          </Link>
+        ) : (
+          <Link className="link" to="/">
+            <h2>Welcome to my authentication App</h2>
+          </Link>
+        )}
       </span>
       {user ? (
         <ul className="list">
@@ -28,9 +34,9 @@ const Navbar = ({ user }) => {
         </ul>
       ) : (
         <>
-          <h3>Identify yourself to see the docs</h3>
+          <h3>(Identify yourself to see the docs)</h3>
           <Link className="link" to="/login">
-            Log in
+            <h3>LOG IN HERE</h3>
           </Link>
         </>
       )}

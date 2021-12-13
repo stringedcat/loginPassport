@@ -48,7 +48,10 @@ router.get(
   })
 );
 
-router.get("/facebook", passport.authenticate("facebook", { scope: ['public_profile'] }));
+router.get(
+  "/facebook",
+  passport.authenticate("facebook", { scope: ["public_profile"] })
+);
 
 router.get(
   "/facebook/callback",
@@ -57,4 +60,18 @@ router.get(
     failureRedirect: "/login/failed",
   })
 );
+
+router.get(
+  "/twitter",
+  passport.authenticate("twitter", { scope: ["profile"] })
+);
+
+router.get(
+  "/twitter/callback",
+  passport.authenticate("twitter", {
+    successRedirect: CLIENT_URL,
+    failureRedirect: "/login/failed",
+  })
+);
+
 module.exports = router;

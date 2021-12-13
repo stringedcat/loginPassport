@@ -10,9 +10,9 @@ const GITHUB_CLIENT_ID = "70221375e0f632901cd9";
 const GITHUB_CLIENT_SECRET = "16ba0287e901869dadba936821965705e3aa5c19";
 const FACEBOOK_APP_ID = "377648377477041";
 const FACEBOOK_APP_SECRET = "865dc75e6ce72e825ff39c7e12f7d1b5";
-const TWITTER_CONSUMER_KEY = "Vrn46JDvEl7IGz65egbuxmbcp";
+const TWITTER_CONSUMER_KEY = "b48djnPMVZnmx6VF8JuyWKDyX";
 const TWITTER_CONSUMER_SECRET =
-  "YyI1kfs3q1KYf7XLwhtQkn2UYmS9dIl0byJYicESR5vrRMlHnO";
+  "tQlQqH3PFHAjoF8h9YAseT0x9CkfN5e7IjP3w4Fl7WDMt22Z2A";
 passport.use(
   new GoogleStrategy(
     {
@@ -51,18 +51,18 @@ passport.use(
   )
 );
 
-/* passport.use(
+passport.use(
   new TwitterStrategy(
     {
-      clientID: TWITTER_CONSUMER_KEY,
-      clientSecret: TWITTER_CONSUMER_SECRET,
+      consumerKey: TWITTER_CONSUMER_KEY,
+      consumerSecret: TWITTER_CONSUMER_SECRET,
       callbackURL: "/auth/twitter/callback",
     },
     function (accessToken, refreshToken, profile, done) {
       return done(null, profile);
     }
   )
-); */
+);
 
 /* passport.use(
   new GitHubStrategy(
