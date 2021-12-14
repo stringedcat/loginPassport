@@ -2,6 +2,7 @@ import React from "react";
 import Google from "../../assets/google.png";
 import Facebook from "../../assets/facebook.png";
 import Github from "../../assets/github.png";
+import Twitter from "../../assets/twitter.png";
 import "./login.css";
 const Login = () => {
   const google = () => {
@@ -20,7 +21,7 @@ const Login = () => {
   };
   return (
     <div className="login">
-      <h1 className="loginTitle">Choosing a Login Method</h1>
+      <h1 className="loginTitle">Log in first</h1>
       <div className="wrapper">
         <div className="left">
           <div className="loginButton google" onClick={google}>
@@ -36,7 +37,7 @@ const Login = () => {
             Github
           </div>
           <div className="loginButton facebook" onClick={twitter}>
-            <img src={Facebook} alt="" />
+            <img src={Twitter} alt="" className="twitter" />
             Twitter
           </div>
         </div>
